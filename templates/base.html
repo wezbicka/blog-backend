@@ -27,7 +27,7 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -54,33 +54,10 @@
     <!--================ Start Blog Post Area =================-->
     {% block post %}{% endblock %}
           <!-- Start Blog Post Siddebar -->
-          <div class="col-lg-4 sidebar-widgets">
-            <div class="widget-wrap">
-              <div class="single-sidebar-widget newsletter-widget">
-                <h4 class="single-sidebar-widget__title">Newsletter</h4>
-                <div class="form-group mt-30">
-                  <div class="col-autos">
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter email'">
-                  </div>
-                </div>
-                <button class="bbtns d-block mt-20 w-100">Subcribe</button>
-              </div>
-
-
-              <div class="single-sidebar-widget post-category-widget">
-                <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
-              </div>
-            </div>
-          </div>
-          <!-- End Blog Post Siddebar -->
-        </div>
-      </div>
-    </section>
     <!--================ End Blog Post Area =================-->
   {% block endmain %}
   {% endblock %}
-
+  {% block contact %}{% endblock %}
   <!--================ Start Footer Area =================-->
   <footer class="footer-area section-padding">
     <div class="container">
